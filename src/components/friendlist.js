@@ -1,9 +1,13 @@
-export default function FriendList({ avatar, name }) {
+export default function FriendsList({ items }) {
   return (
-    <li class="item">
-      <span class="status"></span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
-    </li>
+    <section class="friends">
+      <ul>
+        {" "}
+        FRIENDS LIST
+        {/* {items.map((item) => (
+          <Statistic label={item.label} percent={item.percentage} />
+        ))} */}
+      </ul>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import Statistic from "./statistic";
+import Statistic from "./Statistic";
 
 export default function StatisticList({ items }) {
   return (
