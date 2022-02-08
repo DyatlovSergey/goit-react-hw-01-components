@@ -1,14 +1,24 @@
 import Statistic from "./Statistic";
-
-export default function StatisticList({ items }) {
+import propTypes from "prop-types";
+export default function StatisticList({ title, items }) {
   return (
     <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+      {title && <h2 class="title">{title}</h2>}
       <ul>
         {items.map((item) => (
-          <Statistic label={item.label} percent={item.percentage} />
+          <Statistic
+            key={item.id}
+            label={item.label}
+            percent={item.percentage}
+          />
         ))}
       </ul>
     </section>
   );
 }
+
+StatisticList.propTypes = {
+  items: propTypes.arrayOf(
+    propTypes.shape({ id: propTypes.string.isRequired })
+  ),
+};
