@@ -1,0 +1,14 @@
+.statistic {
+  background-color: teal;
+}
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-right: 10px;
+}
+
+.statisticItems {
+  display: flex;
+  font-size: 18px;
+}

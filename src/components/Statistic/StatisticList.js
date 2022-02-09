@@ -1,10 +1,11 @@
 import Statistic from "./Statistic";
 import propTypes from "prop-types";
-export default function StatisticList({ title, items }) {
+import s from "./Statistic.module.css";
+export default function StatisticList({ items, title }) {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <ul>
+    <section className={s.statistic}>
+      {title && <h2 className="title">{title}</h2>}
+      <ul className={s.statisticItems}>
         {items.map((item) => (
           <Statistic
             key={item.id}

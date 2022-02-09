@@ -1,6 +1,6 @@
-import Profile from "./components/Profile";
-import StatisticList from "./components/StatisticList";
-import FriendsList from "./components/Friendlist";
+import Profile from "./components/Profile/Profile";
+import StatisticList from "./components/Statistic/StatisticList";
+import FriendsList from "./components/FriendList/Friendlist";
 import TransactionHistory from "./components/TransactionHistory";
 import "./App.css";
 import users from "./user.json";
@@ -23,7 +23,7 @@ export default function App() {
         views={users.stats.views}
         likes={users.stats.likes}
       />
-      <StatisticList items={statistics} />
+      <StatisticList title="Upload stats" items={statistics} />
       <FriendsList items={friends} />
       <TransactionHistory items={transactions} />
     </div>

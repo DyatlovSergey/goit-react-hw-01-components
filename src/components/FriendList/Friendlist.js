@@ -1,5 +1,5 @@
-import Friend from "./Friend";
-
+import Friend from "../Friend/Friend";
+import s from ".//FriendList.module.css";
 export default function FriendsList({ items }) {
   return (
     <section class="friends">
