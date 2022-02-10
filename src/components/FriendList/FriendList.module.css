@@ -1,0 +1,9 @@
+.friends {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}

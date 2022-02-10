@@ -1,14 +1,25 @@
 import Friend from "../Friend/Friend";
+import propTypes from "prop-types";
 import s from ".//FriendList.module.css";
 export default function FriendsList({ items }) {
   return (
-    <section class="friends">
+    <section className={s.friends}>
       <ul>
-        FRIENDS LIST
         {items.map((item) => (
-          <Friend key={item.id} avatar={item.avatar} name={item.name} />
+          <Friend
+            key={item.id}
+            isOnline={item.isOnline}
+            avatar={item.avatar}
+            name={item.name}
+          />
         ))}
       </ul>
     </section>
   );
 }
+
+FriendsList.propTypes = {
+  items: propTypes.arrayOf(
+    propTypes.shape({ id: propTypes.string.isRequired })
+  ),
+};

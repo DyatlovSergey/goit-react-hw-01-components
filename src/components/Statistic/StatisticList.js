@@ -17,7 +17,6 @@ export default function StatisticList({ items, title }) {
     </section>
   );
 }
-
 StatisticList.propTypes = {
   items: propTypes.arrayOf(
     propTypes.shape({ id: propTypes.string.isRequired })
